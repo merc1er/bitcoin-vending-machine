@@ -1,28 +1,34 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/static/css/style.css">
 	</head>
 
 	<body>
 	    <!-- Slider -->
 	    <!-- previous -->
 	    <div class="align-horizon">
-		    <button class="btn js-prev"> < </button>
+		    <button class="js-prev"> < </button>
 		    <div class="siema">
 		        <div>
-		        	<a ><img src="items/coke.jpg" alt="Coke" width="150px"></a>
+		        	<a href="#">
+		        		<img src="/static/items/coke.jpg" alt="Coke" width="280px">
+		        		<p>$1</p>
+		        	</a>
 		        </div>
 		        <div>
-		        	<img src="items/coke_zero.jpg" alt="Zero Coke" width="150px">
+		        	<a href="">
+		        		<img src="/static/items/coke_zero.jpg" alt="Zero Coke" width="280px">
+		        		<p>$1</p>
+		        	</a>
 		        </div>
 		    </div>
 		    <!-- next -->
-		    <button class="btn js-next"> > </button>
+		    <button class="js-next"> > </button>
 		</div>
 
         <!-- JavaScript -->
-        <script src="siema.min.js"></script>
+        <script src="/static/siema.min.js"></script>
         <script>
 			var mySiema = new Siema({loop: true});
 	        document.querySelector('.js-prev').addEventListener('click', function() {mySiema.prev()});

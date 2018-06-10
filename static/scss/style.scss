@@ -1,7 +1,9 @@
 /* BCH vending machine stylesheet */
 .siema{
     display: inline;
-    width: 150px;
+    margin: auto auto;
+    text-align: center;
+    width: 480px;
     float: left;
 }
 
@@ -9,10 +11,13 @@
     margin: 0 auto;
 }
 
-.btn{
-    height: 150px;
+.js-prev, .js-next{
+    height: 320px;
     float: left;
     display: inline;
     border: none;
     border-radius: 5px;
+}
+
+.btn{
 }
