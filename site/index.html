@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+	    <!-- Slider -->
+	    <!-- previous -->
+	    <div class="align-horizon">
+		    <button class="btn js-prev"> < </button>
+		    <div class="siema">
+		        <div>
+		        	<a ><img src="items/coke.jpg" alt="Coke" width="150px"></a>
+		        </div>
+		        <div>
+		        	<img src="items/coke_zero.jpg" alt="Zero Coke" width="150px">
+		        </div>
+		    </div>
+		    <!-- next -->
+		    <button class="btn js-next"> > </button>
+		</div>
+
+        <!-- JavaScript -->
+        <script src="siema.min.js"></script>
+        <script>
+			var mySiema = new Siema({loop: true});
+	        document.querySelector('.js-prev').addEventListener('click', function() {mySiema.prev()});
+	        document.querySelector('.js-next').addEventListener('click', function() {mySiema.next()});
+        </script>
+
+    </body>
+</html>
