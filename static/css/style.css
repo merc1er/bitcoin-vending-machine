@@ -10,14 +10,14 @@
   margin: 0 auto; }
 
 .pricing {
-  width: 170px;
+  width: 200px;
   display: inline-block;
   position: absolute;
   top: 30px; }
 
 .js-prev, .js-next {
   background-color: #c0c0c0;
-  height: 300px;
+  height: 280px;
   width: 50px;
   float: left;
   display: inline;
