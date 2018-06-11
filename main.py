@@ -1,5 +1,6 @@
 ####################
 import requests
+import qrcode
 from flask import Flask
 from flask import render_template
 ####################
@@ -14,6 +15,12 @@ def index():
 # order
 @app.route('/<item>')
 def order(item=None):
-    return render_template('order.html', item=item)
+    # fetch the correct price here
+    price = 0.001
+    url = 'bitcoincash:qz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567?amount='
+    url += str(price)
+    img = qrcode.make(url)
+    img.save('static/qr.png')
+    return render_template('order.html', item=item, price=price)
 
 app.run(debug=True, port=666, host='127.0.0.1')
