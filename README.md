@@ -1,5 +1,9 @@
 # Bitcoin (BCH) vending machine
 
+*Bitcoin Vending Machine is a simple software that will turn your micro-computer into a fully functional vending machine.*
+
+INSERT PICTURES HERE
+
 ## Software
 
 - Web interface

@@ -15,7 +15,9 @@
     width: 200px;
     display: inline-block;
     position: absolute;
-    top: 30px;
+    h2{
+        margin-bottom: 0;
+    }
 }
 
 .js-prev, .js-next{

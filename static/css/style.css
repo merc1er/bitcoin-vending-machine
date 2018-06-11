@@ -12,8 +12,9 @@
 .pricing {
   width: 200px;
   display: inline-block;
-  position: absolute;
-  top: 30px; }
+  position: absolute; }
+  .pricing h2 {
+    margin-bottom: 0; }
 
 .js-prev, .js-next {
   background-color: #c0c0c0;
