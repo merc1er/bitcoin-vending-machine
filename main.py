@@ -23,4 +23,7 @@ def order(item=None):
     img.save('static/qr.png')
     return render_template('order.html', item=item, price=price)
 
+####################
+# checking the payment
+
 app.run(debug=True, port=666, host='127.0.0.1')
