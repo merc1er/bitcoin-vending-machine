@@ -2,7 +2,7 @@
 
 *Bitcoin Vending Machine is a simple software that will turn your micro-computer into a fully functional vending machine.*
 
-[rpi](http://image.noelshack.com/fichiers/2018/24/2/1528771436-rpi.jpeg)
+![rpi](http://image.noelshack.com/fichiers/2018/24/2/1528771436-rpi.jpeg)
 
 ## Software
 
@@ -15,4 +15,4 @@
 - LCD 3.5inch RPi display
     - 480x320 pixels
 
-[hardware](http://image.noelshack.com/fichiers/2018/24/2/1528771434-hardware.jpeg)
+![hardware](http://image.noelshack.com/fichiers/2018/24/2/1528771434-hardware.jpeg)
