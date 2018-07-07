@@ -22,7 +22,7 @@ def order(item=None):
     url += str(can_price)
     img = qrcode.make(url)
     img.save('static/qr.png')
-    return render_template('order.html', item=item, price=round(can_price, 5))
+    return render_template('order.html', item=item, price=round(can_price, 4))
 
 ####################
 # checking the payment
