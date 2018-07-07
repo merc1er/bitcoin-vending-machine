@@ -6,5 +6,5 @@ def get():
     req = requests.get('https://api.coinbase.com/v2/prices/bch-usd/buy')
     json = req.json()
     bch_price = float(json['data']['amount'])
-    price = round(1 / bch_price, 7)
+    price = round(1 / bch_price, 6)
     return price
