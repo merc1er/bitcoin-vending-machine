@@ -5,10 +5,12 @@
     text-align: center;
     width: 335px;
     float: left;
+    cursor: none !important;
 }
 
 .align-horizon{
     margin: 0 auto;
+    cursor: none !important;
 }
 
 .pricing{
@@ -28,6 +30,7 @@
     display: inline;
     border: none;
     border-radius: 5px;
+    cursor: none !important;
 }
 
 .cancel{
@@ -38,9 +41,10 @@
     width: 460px;
     height: 40px;
     font-size: 24px;
+    cursor: none !important;
 }
 
 /* disabling cursor for better UX */
-body{
-    cursor: none;
+body, img{
+    cursor: none !important;
 }
