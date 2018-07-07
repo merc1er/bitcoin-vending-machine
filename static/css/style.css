@@ -34,4 +34,8 @@
   height: 40px;
   font-size: 24px; }
 
+/* disabling cursor for better UX */
+body {
+  cursor: none; }
+
 /*# sourceMappingURL=style.css.map */
