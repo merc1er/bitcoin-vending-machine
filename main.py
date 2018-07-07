@@ -16,12 +16,13 @@ def index():
 @app.route('/<item>')
 def order(item=None):
     # fetch the correct price here
-    price = 0.001
+    import lib.price as price
+    can_price = price.get()
     url = 'bitcoincash:qz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567?amount='
-    url += str(price)
+    url += str(can_price)
     img = qrcode.make(url)
     img.save('static/qr.png')
-    return render_template('order.html', item=item, price=price)
+    return render_template('order.html', item=item, price=can_price)
 
 ####################
 # checking the payment
