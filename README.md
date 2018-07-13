@@ -6,7 +6,7 @@
 
 ## Software
 
-- Web interface
+- Python (Flask)
 - Siema JavaScript Slider
 
 ## Hardware
