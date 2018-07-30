@@ -7,7 +7,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 # input your Bitcoin Cash address here
-you_address = 'bitcoincash:qz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567'
+your_address = 'bitcoincash:qz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567'
 
 
 @app.route('/')
@@ -20,7 +20,7 @@ def order(item=None):
     # fetch the correct price here
     import lib.price as price
     can_price = price.get()
-    url = you_address + '?amount='
+    url = your_address + '?amount='
     url += str(can_price)
     img = qrcode.make(url)
     img.save('static/qr.png')
