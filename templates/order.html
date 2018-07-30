@@ -16,5 +16,26 @@
             <button class="cancel">CANCEL ORDER</button>
         </a>
 
+        <!-- Check the payment -->
+        <script src="static/js/jquery.js"></script>
+        <script>
+            function verify_payment() {
+                $.getJSON("https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567",
+                    function(data){
+                        var bal = data.unconfirmedBalance;
+                        console.log(bal);
+                        // we allow a 5% margin with the price (fees etc)
+                        if (bal > {{ exact_price - exact_price * 0.05 }}) {
+                            window.location = "paid";
+                        }
+                    });
+            }
+
+            window.setInterval(function(){
+                verify_payment();
+            }, 1500);
+
+        </script>
+
     </body>
 </html>
