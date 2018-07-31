@@ -1,4 +1,12 @@
 /* BCH vending machine stylesheet */
+@font-face {
+  font-family: titillium;
+  src: url(/static/font/titillium.ttf); }
+body, img {
+  /* disabling cursor for better UX */
+  cursor: none !important;
+  font-family: titillium; }
+
 .siema {
   display: inline;
   margin: auto auto;
@@ -12,7 +20,8 @@
   display: inline-block;
   position: absolute; }
   .pricing h2 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 2px; }
 
 .js-prev, .js-next {
   background-color: #c0c0c0;
@@ -45,9 +54,5 @@
 .center-element {
   margin: 0 auto;
   width: 460px; }
-
-/* disabling cursor for better UX */
-body, img {
-  cursor: none !important; }
 
 /*# sourceMappingURL=style.css.map */

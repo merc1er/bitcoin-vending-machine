@@ -22,7 +22,7 @@
         <script src="static/js/jquery.js"></script>
         <script>
             function verify_payment() {
-                $.getJSON("https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567",
+                $.getJSON("https://rest.bitcoin.com/v1/address/details/bitcoincash%3Aqz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567",
                     function(data){
                         var bal = data.unconfirmedBalance;
                         console.log(bal);
