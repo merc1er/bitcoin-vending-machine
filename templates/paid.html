@@ -6,7 +6,15 @@
 
     <body>
 
-        <img src="/static/img/paid.png" alt="PAID" height="260px">
+        <img src="/static/img/paid.png" alt="PAID" height="160px" class="center">
+        <p class="text-center">Thank you for your purchase</p>
+
+        <script>
+            window.setTimeout(function(){
+                // redirects to the home page after 5 seconds
+                window.location = "/";
+            }, 5000);
+        </script>
 
     </body>
 </html>

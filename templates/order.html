@@ -24,9 +24,9 @@
                     function(data){
                         var bal = data.unconfirmedBalance;
                         console.log(bal);
-                        // we allow a 5% margin with the price (fees etc)
+                        // we allow a 5% margin with the price
                         if (bal > {{ exact_price - exact_price * 0.05 }}) {
-                            window.location = "paid";
+                            window.location = "/{{ item }}/paid";
                         }
                     });
             }

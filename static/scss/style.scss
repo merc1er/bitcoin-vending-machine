@@ -33,7 +33,7 @@
     cursor: none !important;
 }
 
-.cancel{
+.cancel {
     text-align: center;
     background-color: orange;
     border: none;
@@ -42,6 +42,17 @@
     height: 40px;
     font-size: 24px;
     cursor: none !important;
+}
+
+.text-center {
+    position: relative;
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* disabling cursor for better UX */
