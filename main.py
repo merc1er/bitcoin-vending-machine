@@ -7,7 +7,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 # input your Bitcoin Cash address here
-your_address = 'bitcoincash:qz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567'
+your_address = 'bitcoincash:qzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc'
 
 
 @app.route('/')
@@ -24,8 +24,14 @@ def order(item=None):
     url += str(can_price)
     img = qrcode.make(url)
     img.save('static/qr.png')
+    balance = getBalance()
     return render_template('order.html', item=item, price=round(can_price, 4),
-                                                        exact_price=can_price)
+                                        exact_price=can_price, balance=balance)
+
+def getBalance():
+    req = requests.get('https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc').json()
+    balance = req['unconfirmedBalance'] + req['balance'] # using 0-conf
+    return balance
 
 ####################
 # checking the payment

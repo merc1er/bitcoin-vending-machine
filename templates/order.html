@@ -21,21 +21,22 @@
         <!-- Check the payment -->
         <script src="static/js/jquery.js"></script>
         <script>
+
             function verify_payment() {
-                $.getJSON("https://rest.bitcoin.com/v1/address/details/bitcoincash%3Aqz8zcxumuzd8fx4cxc73qlhs8kta4jv6wu9knfn567",
+                $.getJSON("https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc",
                     function(data){
-                        var bal = data.unconfirmedBalance;
-                        console.log(bal);
+                        var new_balance = data.unconfirmedBalance + data.balance;
+                        console.log(new_balance);
                         // we allow a 5% margin with the price
-                        if (bal > {{ exact_price - exact_price * 0.05 }}) {
+                        if (new_balance > {{ balance + exact_price - exact_price * 0.05 }}) {
                             window.location = "/{{ item }}/paid";
-                        }
-                    });
+                    }
+                });
             }
 
             window.setInterval(function(){
                 verify_payment();
-            }, 1500);
+            }, 1500); // checks every 1.5 second
 
         </script>
 
