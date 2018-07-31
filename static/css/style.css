@@ -7,10 +7,6 @@
   float: left;
   cursor: none !important; }
 
-.align-horizon {
-  margin: 0 auto;
-  cursor: none !important; }
-
 .pricing {
   width: 200px;
   display: inline-block;
@@ -42,10 +38,13 @@
   position: relative;
   text-align: center; }
 
-.center {
+.center-image {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+.center-element {
+  margin: 0 auto;
+  width: 460px; }
 
 /* disabling cursor for better UX */
 body, img {

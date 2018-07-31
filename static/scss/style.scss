@@ -1,5 +1,5 @@
 /* BCH vending machine stylesheet */
-.siema{
+.siema {
     display: inline;
     margin: auto auto;
     text-align: center;
@@ -8,21 +8,16 @@
     cursor: none !important;
 }
 
-.align-horizon{
-    margin: 0 auto;
-    cursor: none !important;
-}
-
-.pricing{
+.pricing {
     width: 200px;
     display: inline-block;
     position: absolute;
-    h2{
+    h2 {
         margin-bottom: 0;
     }
 }
 
-.js-prev, .js-next{
+.js-prev, .js-next {
     background-color: #c0c0c0;
     height: 280px;
     width: 50px;
@@ -50,9 +45,15 @@
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    &-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-element {
+        margin: 0 auto;
+        width: 460px;
+    }
 }
 
 /* disabling cursor for better UX */

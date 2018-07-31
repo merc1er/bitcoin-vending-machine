@@ -6,15 +6,17 @@
 
     <body>
 
-        <img src="/static/items/{{ item }}.jpg" alt="Coke" height="260px">
-        <div class="pricing">
-            <h2>PRICE: {{ price }} BCH ($1)</h2>
-            <img src="/static/qr.png" alt="QR code payment" height="185px">
+        <div class="center-element">
+            <img src="/static/items/{{ item }}.jpg" alt="Coke" height="260px">
+            <div class="pricing">
+                <h2>PRICE: {{ price }} BCH ($1)</h2>
+                <img src="/static/qr.png" alt="QR code payment" height="185px">
+            </div>
+            <br>
+            <a href="/">
+                <button class="cancel">CANCEL ORDER</button>
+            </a>
         </div>
-        <br>
-        <a href="/">
-            <button class="cancel">CANCEL ORDER</button>
-        </a>
 
         <!-- Check the payment -->
         <script src="static/js/jquery.js"></script>
