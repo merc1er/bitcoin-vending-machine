@@ -16,3 +16,8 @@
     - 480x320 pixels
 
 ![hardware](http://image.noelshack.com/fichiers/2018/24/2/1528771434-hardware.jpeg)
+
+## Future improvements
+
+- Hardware design
+- Addresses generated from xpub
