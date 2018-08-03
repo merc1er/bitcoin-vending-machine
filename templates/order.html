@@ -22,13 +22,22 @@
         <script src="static/js/jquery.js"></script>
         <script>
 
+            var balance;
+
+            $.ajax({
+             url: 'https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc',
+            }).done(function (data) {
+             balance = data.balance;
+             console.log(balance);
+            });
+
             function verify_payment() {
-                $.getJSON("https://rest.bitcoin.com/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc",
+                $.getJSON("https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc",
                     function(data){
                         var new_balance = data.unconfirmedBalance + data.balance;
                         console.log(new_balance);
                         // we allow a 5% margin with the price
-                        if (new_balance > {{ balance + exact_price - exact_price * 0.05 }}) {
+                        if (new_balance > balance + {{ exact_price - exact_price * 0.05 }}) {
                             window.location = "/{{ item }}/paid";
                     }
                 });
@@ -36,7 +45,7 @@
 
             window.setInterval(function(){
                 verify_payment();
-            }, 1500); // checks every 1.5 second
+            }, 2000); // checks every 1.5 second
 
         </script>
 

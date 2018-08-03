@@ -24,14 +24,9 @@ def order(item=None):
     url += str(can_price)
     img = qrcode.make(url)
     img.save('static/qr.png')
-    balance = getBalance()
     return render_template('order.html', item=item, price=round(can_price, 4),
-                                        exact_price=can_price, balance=balance)
+                                            exact_price=can_price)
 
-def getBalance():
-    req = requests.get('https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc').json()
-    balance = req['unconfirmedBalance'] + req['balance'] # using 0-conf
-    return balance
 
 ####################
 # checking the payment

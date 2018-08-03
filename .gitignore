@@ -5,3 +5,4 @@ instance/
 .sass-cache
 qr.png
 vending.mov
+*.pages
