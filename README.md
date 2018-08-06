@@ -17,6 +17,11 @@
 
 ![hardware](http://image.noelshack.com/fichiers/2018/24/2/1528771434-hardware.jpeg)
 
+## Todo list
+
+- [ ] QR code created in another process
+- [ ] JavaScript page loader
+
 ## Future improvements
 
 - Hardware design
