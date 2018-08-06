@@ -27,7 +27,7 @@
             $.ajax({
              url: 'https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc',
             }).done(function (data) {
-             balance = data.balance;
+             balance = data.unconfirmedBalance + data.balance;
              console.log(balance);
             });
 
