@@ -1,37 +1,75 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<link rel="stylesheet" href="/static/css/style.css">
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<body>
-	    <!-- Slider -->
-	    <!-- previous -->
-	    <div class="center-element">
-		    <button class="js-prev"> < </button>
-		    <div class="siema">
-		        <div>
-		        	<a href="/coke">
-		        		<img src="/static/items/coke.jpg" alt="Coke" height="280px">
-		        	</a>
-		        </div>
-		        <div>
-		        	<a href="/coke_zero">
-		        		<img src="/static/items/coke_zero.jpg" alt="Zero Coke" height="280px">
-		        	</a>
-		        </div>
-		    </div>
-		    <!-- next -->
-		    <button class="js-next"> > </button>
-		</div>
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
 
-        <!-- JavaScript -->
-        <script src="/static/siema.min.js"></script>
-        <script>
-			var mySiema = new Siema({loop: true});
-	        document.querySelector('.js-prev').addEventListener('click', function() {mySiema.prev()});
-	        document.querySelector('.js-next').addEventListener('click', function() {mySiema.next()});
-        </script>
+    <!-- Custom styles for this template -->
+    <link href="static/css/style.css" rel="stylesheet">
+  </head>
 
-    </body>
+  <body>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light coca-cola">
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <a href="/1" class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Weird Drink</h2>
+          <p class="lead">$2</p>
+          <img src="static/items/1.png" alt="" height="400px">
+        </div>
+      </a>
+      <a href="/2" class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Another Weird Drink</h2>
+          <p class="lead">$2</p>
+          <img src="static/items/2.png" alt="" height="400px">
+        </div>
+      </a>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <a href="/3" class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Some Coke</h2>
+          <p class="lead">$1</p>
+          <img src="static/items/3.png" alt="" height="400px">
+        </div>
+      </a>
+      <a href="/4" class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Diet Coke</h2>
+          <p class="lead">$1</p>
+          <img src="static/items/4.png" alt="" height="400px">
+        </div>
+      </a>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <a href="/5" class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Twix</h2>
+          <p class="lead">$1</p>
+          <img src="static/items/5.png" alt="" height="400px">
+        </div>
+      </a>
+      <a href="/6" class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Mars</h2>
+          <p class="lead">$1</p>
+          <img src="static/items/6.png" alt="" height="400px">
+        </div>
+      </a>
+    </div>
+
+    </div>
+
+  </body>
 </html>
+
