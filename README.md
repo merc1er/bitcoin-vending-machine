@@ -2,7 +2,7 @@
 
 *Bitcoin Vending Machine is a simple software that will turn your micro-computer into a fully functional vending machine.*
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jCm6xKr1zkM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![showcase](bitcoin-vending.jpg)](https://www.youtube.com/watch?v=jCm6xKr1zkM)
 
 ## Software
 

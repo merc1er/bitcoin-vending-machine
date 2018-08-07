@@ -7,4 +7,12 @@ def get():
     json = req.json()
     bch_price = float(json['data']['amount'])
     price = 1 / bch_price
-    return price
+    return str(price)
+
+def writePrice(price):
+    with open('price', 'w') as f:
+        f.write(price)
+
+if __name__ == '__main__':
+    price = get()
+    writePrice(price)
