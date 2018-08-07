@@ -19,7 +19,6 @@
 
 ## Todo list
 
-- [ ] QR code created in another process
 - [ ] JavaScript page loader
 
 ## Future improvements
