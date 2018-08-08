@@ -17,7 +17,7 @@
           <div class="row justify-content-md-center">
               <div class="col-md-auto">
                   <div class="text-center">
-                      <h2>PRICE: {{ price }} BCH ($1)</h2>
+                      <h2 class="price-tag">PRICE: {{ price }} BCH ($1)</h2>
                       <img src="/static/qr.png" alt="QR code payment">
                   </div>
               </div>
@@ -37,7 +37,7 @@
             var balance;
 
             $.ajax({
-             url: 'https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc',
+             url: 'https://rest.bitcoin.com/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc',
             }).done(function (data) {
              balance = data.unconfirmedBalance + data.balance;
              console.log(balance);

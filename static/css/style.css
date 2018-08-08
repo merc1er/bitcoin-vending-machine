@@ -92,3 +92,16 @@ a {
   height: 10vh;
   font-size: 2.5vh;
 }
+
+.text-paid {
+  font-size: 2.5vh;
+  margin-top: 2vh;
+}
+
+.paid {
+  margin-top: 10vh;
+}
+
+.price-tag {
+  padding-top: 4vh;
+}
