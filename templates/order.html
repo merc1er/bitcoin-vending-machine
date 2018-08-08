@@ -1,22 +1,34 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- Bootstrap core CSS -->
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="static/css/style.css">
     </head>
 
     <body>
 
-        <div class="center-element">
-            <img src="/static/items/{{ item }}.png" alt="{{ item }}" height="450px">
-            <div class="pricing">
-                <h2>PRICE: {{ price }} BCH ($1)</h2>
-                <img src="/static/qr.png" alt="QR code payment" height="180px">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+              <img src="/static/items/{{ item }}.png" alt="{{ item }}" height="450px">
             </div>
-            <br>
-            <a href="/">
-                <button class="cancel">CANCEL ORDER</button>
-            </a>
+          </div>
+          <div class="row justify-content-md-center">
+              <div class="col-md-auto">
+                  <div class="text-center">
+                      <h2>PRICE: {{ price }} BCH ($1)</h2>
+                      <img src="/static/qr.png" alt="QR code payment">
+                  </div>
+              </div>
+          </div>
         </div>
+
+
+        <a href="/" class="text-center">
+            <button class="btn btn-primary cancel">CANCEL ORDER</button>
+        </a>
+
 
         <!-- Check the payment -->
         <script src="static/js/jquery.js"></script>
