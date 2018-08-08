@@ -4,10 +4,26 @@
 
 [![showcase](bitcoin-vending.jpg)](https://www.youtube.com/watch?v=jCm6xKr1zkM)
 
-## Software
+## Installation
 
-- Python (Flask)
-- Siema JavaScript Slider
+*Tested on several UNIX-like operating systems. Works on ARM.*
+
+For now, this is a browser-based application which means the app is going to run on a full-screen browser.
+
+Hardware requirement: *rest to come* (for now a touch screen will suffice)  
+Software requirement: this is a Python3 app. Then download the required libraries with the following command:
+
+```shell
+pip3 install -i requirements.txt
+```
+
+Start the Flask server with:
+
+```shell
+sudo python3 main.py
+```
+
+And open up 127.0.0.1:5000
 
 ## Hardware
 
