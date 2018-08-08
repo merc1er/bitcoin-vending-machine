@@ -11,7 +11,7 @@
         <div class="container">
           <div class="row justify-content-md-center">
             <div class="col-md-auto">
-              <img src="/static/items/{{ item }}.png" alt="{{ item }}" height="450px">
+              <img src="/static/items/{{ item }}.png{{ forcer }}" alt="{{ item }}" height="450px">
             </div>
           </div>
           <div class="row justify-content-md-center">
@@ -48,8 +48,8 @@
                     function(data){
                         var new_balance = data.unconfirmedBalance + data.balance;
                         console.log(new_balance);
-                        // we allow a 5% margin with the price
-                        if (new_balance > balance + {{ exact_price - exact_price * 0.05 }}) {
+                        // we allow a 6% margin with the price
+                        if (new_balance > balance + {{ exact_price - exact_price * 0.06 }}) {
                             window.location = "/{{ item }}/paid";
                     }
                 });
