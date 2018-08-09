@@ -9,18 +9,16 @@
     <body>
 
         <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-auto">
-              <img src="/static/items/{{ item }}.png{{ forcer }}" alt="{{ item }}" height="450px">
-            </div>
-          </div>
-          <div class="row justify-content-md-center">
-              <div class="col-md-auto">
+        	<div class="row justify-content-md-center order-item">
+        		<div class="col-md-6">
+        			<img src="/static/items/{{ item }}.png{{ forcer }}" alt="{{ item }}" height="450px">
+        		</div>
+              	<div class="col-md-6">
                   <div class="text-center">
-                      <h2 class="price-tag">PRICE: {{ price }} BCH ($1)</h2>
+                      <h1>PRICE: {{ price }} BCH ($1)</h1>
                       <img src="/static/qr.png" alt="QR code payment">
                   </div>
-              </div>
+              	</div>
           </div>
         </div>
 

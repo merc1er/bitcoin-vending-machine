@@ -94,14 +94,14 @@ a {
 }
 
 .text-paid {
-  font-size: 2.5vh;
-  margin-top: 2vh;
+  font-size: 3.5vh;
+  margin-top: 5vh;
 }
 
 .paid {
-  margin-top: 10vh;
+  margin-top: 13vh;
 }
 
-.price-tag {
-  padding-top: 4vh;
+.order-item {
+  padding-top: 17vh;
 }

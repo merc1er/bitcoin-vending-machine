@@ -23,7 +23,7 @@ Start the Flask server with:
 sudo python3 main.py
 ```
 
-And open up 127.0.0.1:5000
+And open up 127.0.0.1:5000 in your browser.
 
 ## Hardware
 
