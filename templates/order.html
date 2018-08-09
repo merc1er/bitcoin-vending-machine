@@ -1,22 +1,32 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- Bootstrap core CSS -->
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="static/css/style.css">
     </head>
 
     <body>
 
-        <div class="center-element">
-            <img src="/static/items/{{ item }}.jpg" alt="Coke" height="260px">
-            <div class="pricing">
-                <h2>PRICE: {{ price }} BCH ($1)</h2>
-                <img src="/static/qr.png" alt="QR code payment" height="180px">
-            </div>
-            <br>
-            <a href="/">
-                <button class="cancel">CANCEL ORDER</button>
-            </a>
+        <div class="container">
+        	<div class="row justify-content-md-center order-item">
+        		<div class="col-md-6">
+        			<img src="/static/items/{{ item }}.png{{ forcer }}" alt="{{ item }}" height="450px">
+        		</div>
+              	<div class="col-md-6">
+                  <div class="text-center">
+                      <h1>PRICE: {{ price }} BCH ($1)</h1>
+                      <img src="/static/qr.png" alt="QR code payment">
+                  </div>
+              	</div>
+          </div>
         </div>
+
+
+        <a href="/" class="text-center">
+            <button class="btn btn-primary cancel">CANCEL ORDER</button>
+        </a>
+
 
         <!-- Check the payment -->
         <script src="static/js/jquery.js"></script>
@@ -25,7 +35,7 @@
             var balance;
 
             $.ajax({
-             url: 'https://rest.bitbox.earth/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc',
+             url: 'https://rest.bitcoin.com/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc',
             }).done(function (data) {
              balance = data.unconfirmedBalance + data.balance;
              console.log(balance);
@@ -36,8 +46,8 @@
                     function(data){
                         var new_balance = data.unconfirmedBalance + data.balance;
                         console.log(new_balance);
-                        // we allow a 5% margin with the price
-                        if (new_balance > balance + {{ exact_price - exact_price * 0.05 }}) {
+                        // we allow a 6% margin with the price
+                        if (new_balance > balance + {{ exact_price - exact_price * 0.06 }}) {
                             window.location = "/{{ item }}/paid";
                     }
                 });

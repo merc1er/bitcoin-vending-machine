@@ -1,58 +1,107 @@
-/* BCH vending machine stylesheet */
-@font-face {
-  font-family: titillium;
-  src: url(/static/font/titillium.ttf); }
-body, img {
-  /* disabling cursor for better UX */
-  cursor: none !important;
-  font-family: titillium; }
+a {
+  text-decoration: none !important;
+  color: black;
+}
 
-.siema {
-  display: inline;
-  margin: auto auto;
-  text-align: center;
-  width: 335px;
-  float: left;
-  cursor: none !important; }
+.container {
+  max-width: 960px;
+}
 
-.pricing {
-  width: 200px;
-  display: inline-block;
-  position: absolute; }
-  .pricing h2 {
-    margin-bottom: 0;
-    margin-top: 2px; }
+/*
+ * Custom translucent site header
+ */
 
-.js-prev, .js-next {
-  background-color: #c0c0c0;
-  height: 280px;
-  width: 50px;
-  float: left;
-  display: inline;
-  border: none;
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
   border-radius: 5px;
-  cursor: none !important; }
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
+
+.coca-cola {
+  background-image: url(../img/cocacola.jpg);
+  background-size: cover;
+  height: 500px;
+}
 
 .cancel {
-  text-align: center;
-  background-color: orange;
-  border: none;
-  border-radius: 5px;
-  width: 460px;
-  height: 40px;
-  font-size: 24px;
-  cursor: none !important; }
+  position: fixed;
+  bottom: 0;
+  /*width: 100vh;*/
+  min-width:100%;
+  height: 10vh;
+  font-size: 2.5vh;
+}
 
-.text-center {
-  position: relative;
-  text-align: center; }
+.text-paid {
+  font-size: 3.5vh;
+  margin-top: 5vh;
+}
 
-.center-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-.center-element {
-  margin: 0 auto;
-  width: 460px; }
+.paid {
+  margin-top: 13vh;
+}
 
-/*# sourceMappingURL=style.css.map */
+.order-item {
+  padding-top: 17vh;
+}

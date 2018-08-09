@@ -2,6 +2,7 @@
 import requests
 import qrcode
 from flask import Flask, render_template
+from random import randint
 ####################
 
 app = Flask(__name__)
@@ -24,8 +25,10 @@ def order(item=None):
     url += str(can_price)
     img = qrcode.make(url)
     img.save('static/qr.png')
+    rnd = randint(1000, 100000000)
+    force_reload = '?' + str(rnd)
     return render_template('order.html', item=item, price=round(can_price, 4),
-                                            exact_price=can_price)
+                                    exact_price=can_price, forcer=force_reload)
 
 def getprice():
     with open('price', 'r') as f:
