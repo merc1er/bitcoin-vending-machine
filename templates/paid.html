@@ -1,20 +1,31 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Bootstrap core CSS -->
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/static/css/style.css">
     </head>
 
     <body>
 
-        <img src="/static/img/paid.png" alt="PAID" height="160px" class="center-image" style="padding-top: 20px;">
-        <p class="text-center">Thank you for your purchase</p>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <img src="/static/img/paid.svg" alt="PAID" height="350px" class="paid">
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center text-paid">Thank you for your purchase</h2>
+
+        <a href="/" class="text-center">
+            <button class="btn btn-primary cancel">BUY ANOTHER DRINK</button>
+        </a>
 
         <script>
             window.setTimeout(function(){
-                // redirects to the home page after 5 seconds
+                // redirects to the home page after 10 seconds
                 window.location = "/";
-            }, 5000);
+            }, 10000);
         </script>
-
     </body>
 </html>
