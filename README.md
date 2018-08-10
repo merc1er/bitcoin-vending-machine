@@ -30,6 +30,8 @@ And open up 127.0.0.1:5000 in your browser.
 ## Todo list
 
 - [ ] JavaScript page loader
+- [ ] Check different APIs
+- [ ] Display error page if no internet connection/API down
 
 ## Future improvements
 
