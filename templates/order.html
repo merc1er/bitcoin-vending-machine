@@ -46,7 +46,7 @@
                     function(data){
                         var new_balance = data.unconfirmedBalance + data.balance;
                         console.log(new_balance);
-                        // we allow a 6% margin with the price
+                        // we allow a 6% margin with the price, just in case
                         if (new_balance > balance + {{ exact_price - exact_price * 0.06 }}) {
                             window.location = "/{{ item }}/paid";
                     }

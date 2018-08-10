@@ -18,14 +18,13 @@ def index():
 # order
 @app.route('/<item>')
 def order(item=None):
-    # fetch the correct price here
     import lib.price as price
     can_price = getprice()
     url = your_address + '?amount='
     url += str(can_price)
     img = qrcode.make(url)
     img.save('static/qr.png')
-    rnd = randint(1000, 100000000)
+    rnd = randint(1000, 100000000) # append to the image so it gets hard loaded
     force_reload = '?' + str(rnd)
     return render_template('order.html', item=item, price=round(can_price, 4),
                                     exact_price=can_price, forcer=force_reload)

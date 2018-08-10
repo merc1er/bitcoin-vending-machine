@@ -2,6 +2,8 @@
 
 *Bitcoin Vending Machine is a simple software that will turn your micro-computer into a fully functional vending machine.*
 
+v0.1
+
 [![showcase](bitcoin-vending.jpg)](https://www.youtube.com/watch?v=jCm6xKr1zkM)
 
 ## Installation
@@ -24,14 +26,6 @@ sudo python3 main.py
 ```
 
 And open up 127.0.0.1:5000 in your browser.
-
-## Hardware
-
-- Raspberry Pi 3
-- LCD 3.5inch RPi display
-    - 480x320 pixels
-
-![hardware](http://image.noelshack.com/fichiers/2018/24/2/1528771434-hardware.jpeg)
 
 ## Todo list
 
