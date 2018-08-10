@@ -33,7 +33,12 @@ def order(item=None):
 def getprice():
     with open('price', 'r') as f:
         price = f.readline()
+    if price == '': # in case the file is empty
+        import os
+        os.system('python3 lib/price.py')
+        return getprice()
     return float(price)
+
 
 ####################
 # checking the payment
