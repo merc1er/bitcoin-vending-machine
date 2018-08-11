@@ -38,13 +38,18 @@ def getprice():
         return getprice()
     return float(price)
 
-
 ####################
-# checking the payment
+# Checking the payment
 @app.route('/<item>/paid')
 def payment_complete(item=None):
     # if the item is paid, dispense the can + inform user
     return render_template('paid.html')
+
+####################
+# Error page
+@app.route('/error')
+def error():
+    return render_template('error.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000, host='127.0.0.1')

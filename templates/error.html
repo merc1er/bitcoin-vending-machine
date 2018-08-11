@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Bootstrap core CSS -->
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <img src="/static/img/error.svg" alt="PAID" height="350px" class="paid">
+                </div>
+            </div>
+        </div>
+        <h2 class="text-center text-paid">Error</h2>
+
+        <a href="/" class="text-center">
+            <button class="btn btn-primary cancel">RETRY</button>
+        </a>
+
+        <script>
+            window.setTimeout(function(){
+                // redirects to the home page after 10 seconds
+                window.location = "/";
+            }, 10000);
+        </script>
+    </body>
+</html>
