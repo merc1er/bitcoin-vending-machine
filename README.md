@@ -16,7 +16,7 @@ Hardware requirement: *rest to come* (for now a touch screen will suffice)
 Software requirement: this is a Python3 app. Then download the required libraries with the following command:
 
 ```shell
-pip3 install -i requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Start the Flask server with:
