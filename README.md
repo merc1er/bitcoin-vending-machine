@@ -12,7 +12,6 @@ v0.1
 
 For now, this is a browser-based application which means the app is going to run on a full-screen browser.
 
-Hardware requirement: *rest to come* (for now a touch screen will suffice)  
 Software requirement: this is a Python3 app. Then download the required libraries with the following command:
 
 ```shell
