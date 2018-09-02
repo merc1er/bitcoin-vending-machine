@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 # input your Bitcoin Cash address here
 your_address = 'bitcoincash:qzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc'
+html_address = your_address.replace(':', '%3A')
 
 
 @app.route('/')
@@ -27,14 +28,15 @@ def order(item=None):
     rnd = randint(1000, 100000000) # append to the image so it gets hard loaded
     force_reload = '?' + str(rnd)
     return render_template('order.html', item=item, price=round(can_price, 4),
-                                    exact_price=can_price, forcer=force_reload)
+                                            exact_price=can_price,
+                                            forcer=force_reload,
+                                            html_address=html_address)
 
 def getprice():
     with open('price', 'r') as f:
         price = f.readline()
     if price == '': # in case the file is empty
-        import os
-        os.system('python3 lib/price.py')
+        import lib.price
         return getprice()
     return float(price)
 

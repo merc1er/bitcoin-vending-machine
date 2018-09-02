@@ -35,7 +35,7 @@
             var balance;
 
             $.ajax({
-             url: 'https://rest.bitcoin.com/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc',
+             url: 'https://rest.bitcoin.com/v1/address/details/{{ html_address }}',
             }).done(function (data) {
              balance = data.unconfirmedBalance + data.balance;
              console.log(balance);
