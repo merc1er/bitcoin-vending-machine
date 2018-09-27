@@ -7,8 +7,9 @@ from random import randint
 
 app = Flask(__name__)
 
-# input your Bitcoin Cash address here
-your_address = 'bitcoincash:qzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc'
+# Global variables
+with open('address', 'r') as f:
+    your_address = f.readline().strip()
 html_address = your_address.replace(':', '%3A')
 
 
@@ -54,4 +55,5 @@ def error():
     return render_template('error.html')
 
 if __name__ == '__main__':
+    print(your_address)
     app.run(debug=True, port=5000, host='127.0.0.1')
