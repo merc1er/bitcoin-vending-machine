@@ -4,7 +4,7 @@
 
 v0.1
 
-[![showcase](bitcoin-vending.jpg)](https://www.youtube.com/watch?v=jCm6xKr1zkM)
+[![showcase](bitcoin-vending.jpg)](https://www.youtube.com/watch?v=O7LLYY2s3MA&feature=youtu.be)
 
 ## Installation
 
