@@ -18,7 +18,9 @@ Software requirement: this is a Python3 app. Then download the required librarie
 pip3 install -r requirements.txt
 ```
 
-Start the Flask server with:
+Input your Bitcoin Cash address (and only the address) in the ```address``` file.
+
+Start the server with:
 
 ```shell
 sudo python3 main.py
@@ -26,12 +28,14 @@ sudo python3 main.py
 
 And open up 127.0.0.1:5000 in your browser.
 
-## Todo list
+## Development
+
+### Todo list
 
 - [ ] JavaScript page loader
 - [ ] Check different APIs
 - [ ] Display error page if no internet connection/API down
 
-## Future improvements
+### Future improvements
 
 - Addresses generated from xpub
