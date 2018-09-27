@@ -34,5 +34,4 @@ And open up 127.0.0.1:5000 in your browser.
 
 ## Future improvements
 
-- Hardware design
 - Addresses generated from xpub
