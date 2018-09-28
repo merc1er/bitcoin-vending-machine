@@ -23,7 +23,7 @@ def order(item=None):
     import lib.price as price
     can_price = getprice()
     url = your_address + '?amount='
-    url += str(can_price)
+    url += str(can_price) # appending the amount
     img = qrcode.make(url)
     img.save('static/qr.png')
     rnd = randint(1000, 100000000) # append to the image so it gets hard loaded
@@ -45,7 +45,9 @@ def getprice():
 # Checking the payment
 @app.route('/<item>/paid')
 def payment_complete(item=None):
-    # if the item is paid, dispense the can + inform user
+    # the item is now paid
+    import lib.dispense as dispense
+    dispense.dispense(item)
     return render_template('paid.html')
 
 ####################
