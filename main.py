@@ -37,7 +37,11 @@ def getprice():
     with open('price', 'r') as f:
         price = f.readline()
     if price == '': # in case the file is empty
-        import lib.price
+        print('empty price') # test
+        import lib.price as price
+        print('imported') # test
+        price.get()
+        print('got') # test
         return getprice()
     return float(price)
 
@@ -57,5 +61,4 @@ def error():
     return render_template('error.html')
 
 if __name__ == '__main__':
-    print(your_address)
     app.run(debug=True, port=5000, host='127.0.0.1')
