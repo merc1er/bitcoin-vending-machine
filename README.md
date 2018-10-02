@@ -2,31 +2,26 @@
 
 *Bitcoin Vending Machine is a simple software that will turn your micro-computer into a fully functional vending machine.*
 
-v0.1
+v0.2.1
 
-[![showcase](bitcoin-vending.jpg)](https://www.youtube.com/watch?v=O7LLYY2s3MA&feature=youtu.be)
+[![showcase](http://image.noelshack.com/fichiers/2018/40/2/1538465805-img-3565.jpg)](https://www.youtube.com/watch?v=O7LLYY2s3MA&feature=youtu.be)
 
 ## Installation
 
-*Tested on several UNIX-like operating systems. Works on ARM.*
-
 For now, this is a browser-based application which means the app is going to run on a full-screen browser.
 
-Software requirement: this is a Python3 app. Then download the required libraries with the following command:
+Software requirement: this software is meant to be run on [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) or later.  
+⚠️ Note: in order to check payments, a stable internet connection is required.
 
 ```shell
+git clone https://github.com/BUYMERCIER/bitcoin-vending-machine
+cd bitcoin-vending-machine
 pip3 install -r requirements.txt
+vi address # input your Bitcoin Cash address here
+python3 main.py
 ```
 
-Input your Bitcoin Cash address (and only the address) in the ```address``` file.
-
-Start the server with:
-
-```shell
-sudo python3 main.py
-```
-
-And open up 127.0.0.1:5000 in your browser.
+Then open up 127.0.0.1:5000 in your browser.
 
 ## Development
 
