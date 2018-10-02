@@ -7,6 +7,11 @@ a {
   max-width: 960px;
 }
 
+/* remove scrollbar chromium */
+::-webkit-scrollbar { 
+  display: none;
+}
+
 /*
  * Custom translucent site header
  */
