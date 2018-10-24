@@ -42,7 +42,7 @@
             });
 
             function verify_payment() {
-                $.getJSON("https://rest.bitcoin.com/v1/address/details/bitcoincash%3Aqzrcvjpplnpa6qq2dtcshmke4yl9ngdwfcyfan5vtc",
+                $.getJSON("https://rest.bitcoin.com/v1/address/details/{{ html_address }}",
                     function(data){
                         var new_balance = data.unconfirmedBalance + data.balance;
                         console.log(new_balance);
