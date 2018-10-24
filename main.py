@@ -51,7 +51,7 @@ def getprice():
 def payment_complete(item=None):
     # the item is now paid
     import lib.dispense as dispense
-    dispense.dispense(item)
+    # dispense.dispense(item) # testing
     return render_template('paid.html')
 
 ####################
