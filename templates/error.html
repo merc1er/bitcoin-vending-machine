@@ -17,6 +17,9 @@
         </div>
         <h2 class="text-center text-paid">Error</h2>
 
+        <p class="text-center text-danger">No internet connection or API down.</p>
+        <p class="text-center text-danger">Contact 18500130643 for support</p>
+
         <a href="/" class="text-center">
             <button class="btn btn-primary cancel">RETRY</button>
         </a>
@@ -25,7 +28,8 @@
             window.setTimeout(function(){
                 // redirects to the home page after 10 seconds
                 window.location = "/";
-            }, 10000);
+            }, 15000); // Redirects after 15 seconds
         </script>
+
     </body>
 </html>
