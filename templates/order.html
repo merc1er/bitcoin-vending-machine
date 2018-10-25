@@ -32,13 +32,18 @@
         <script src="static/js/jquery.js"></script>
         <script>
 
+            // check if connected to the internet
+            if (!navigator.onLine) {
+                window.location = "/error";
+            }
+
             var balance;
 
             $.ajax({
              url: 'https://rest.bitcoin.com/v1/address/details/{{ html_address }}',
             }).done(function (data) {
              balance = data.unconfirmedBalance + data.balance;
-             console.log(balance);
+             console.log(balance); // logging
             });
 
             function verify_payment() {
@@ -46,10 +51,14 @@
                     function(data){
                         var new_balance = data.unconfirmedBalance + data.balance;
                         console.log(new_balance);
-                        // we allow a 6% margin with the price, just in case
-                        if (new_balance > balance + {{ exact_price - exact_price * 0.06 }}) {
+                        // check if connected to the internet
+                        if (!navigator.onLine) {
+                            window.location = "/error";
+                        }
+                        // we allow a 5% margin with the price, just in case
+                        if (new_balance > balance + {{ exact_price - exact_price * 0.05 }}) {
                             window.location = "/{{ item }}/paid";
-                    }
+                        }
                 });
             }
 
